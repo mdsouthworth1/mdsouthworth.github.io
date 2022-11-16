@@ -211,7 +211,7 @@ Beta Gamma Sigma Honor Society <br>
                       <img src="images/cholesterol.png" class="img-fluid" alt="Distribution of cholesterol"><br>
                       Finally, we can see the correlation between them and if there are any variables in the data too correlated that we need to look out for in this heatmap:
                       <img src="images/heatmap.png" alt="heatmap"><br>
-                      We can see some problems with 0 values in cholesterol and other issues with the data. Removing cholesterol altogether leads to a worse model than without so in this case I will simply remove the rows with the missing values instead. Other variables have little affect on accuracy so I will remove those. This leaves the remaining variables:
+                      We can see some problems with 0 values in cholesterol and other issues with the data. Removing cholesterol altogether leads to a worse model than without so in this case I will simply remove the rows with the missing values instead. The other variables have wide ranges so I scale those and create categories for the non-numerical variables. 
                     </p>
                     <p>With the variables I selected, we can see the results:<br>
                       Accuracy: 0.8666666666666667<br>
