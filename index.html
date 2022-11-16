@@ -198,10 +198,28 @@ Beta Gamma Sigma Honor Society <br>
                 <!-- Replace Patch to Image Under -->
                 <div class="expandMoreContent" id="showMoreContent1">
                     <p>Predictions of Heart Disease</p>
-                    <p>This project incldues the exploration of the leading indicators of heart disease. Using python, I examine each of the variables
-                      of patients and develop a model to predict them. <br>
+                    <p>This project incldues the exploration of the leading indicators of heart disease. Using Python, I examine each of the variables and develop a model to predict them. I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. <br>
+                      Here we see the distribution for those with and without heart disease:
                       <img src="images/PctHeartDisease.png" class="img-fluid" alt="Pct Heart Disease">
+                      <img src="images/hdcount.png" class="img-fluid" alt="Count">
                     </p>
+                    <p>We begin with these variables:
+                      Age,	Sex,	ChestPainType,	RestingBP,	Cholesterol,	FastingBS,	RestingECG,	MaxHR,	ExerciseAngina,	Oldpeak,	ST_Slope<br><br>	
+                      Next we see the distribution of each variable:<br>
+                      <img src="images/maxhr.png" class="img-fluid" alt="Distribution of Max HR">
+                      <img src="images/age.png" class="img-fluid" alt="Distribution of Age">
+                      <img src="images/ageoldpeakrange.png" class="img-fluid" alt="Distribution of oldpeak">
+                      <img src="images/cholesterol.png" class="img-fluid" alt="Distribution of cholesterol"><br>
+                      Finally, we can see the correlation between them and if there are any variables in the data too correlated that we need to look out for in this heatmap:
+                      <img src="images/heatmap.png" alt="heatmap"><br>
+                      We can see some problems with 0 values in cholesterol and other issues with the data. Removing cholesterol altogether leads to a worse model than without so in this case I will simply remove the rows with the missing values instead. Other variables have little affect on accuracy so I will remove those. This leaves the remaining variables:
+                    </p>
+                    <p>With the variables I selected, we can see the results:<br>
+                      Accuracy: 0.8666666666666667<br>
+                      Precision: 0.8356164383561644<br>
+                      Recall: 0.8840579710144928
+                    </p>
+                    <p>We used Logistics regression in this example but there are many more effective machine learning models that we can use to improve upon the result.</p>
                 </div>
                 <div class="expandMoreHolder">
                     <span class="btn-expand-more" data-hidetext="Show Less.." data-showtext="Show More..."
