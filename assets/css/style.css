@@ -10927,6 +10927,16 @@ textarea.form-control-lg {
   margin-bottom: 30px;
 }
 
+.hideContent {
+  overflow: hidden;
+  line-height: 1em;
+  height: 2em;
+}
+
+.showContent {
+  line-height: 1em;
+  height: auto;
+}
 .expandMoreContent {
   height: 400px;
   overflow: hidden;
