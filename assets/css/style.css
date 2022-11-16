@@ -10928,7 +10928,7 @@ textarea.form-control-lg {
 }
 
 .expandMoreContent {
-  
+  height: 400px;
   overflow: hidden;
   transition: height 0.5s ease-in-out;
   position: relative;
