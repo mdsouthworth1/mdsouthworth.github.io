@@ -10941,6 +10941,35 @@ textarea.form-control-lg {
   padding: 10px 0;
   text-align: center;
 }
+
+#container {
+  border: 1px solid black;
+  padding: 15px;
+}
+
+#top-section {
+ border-bottom: 1px;
+}
+
+#expand-container {
+ overflow: hidden;
+ transition: height 0.5s ease-in-out;
+ position: relative;
+ padding: 15px 0;
+ text-align: center;
+}
+
+#expand-contract {
+ border-bottom: 1px solid red;
+ margin-top: -100%;
+ transition: all 1s;
+}
+
+#expand-contract.expanded {
+  margin-top: 0;
+  height: auto;
+  transition: height 0.5s ease-in-out;
+}
 .expandMoreContent {
   height: 200px;
   overflow: hidden;

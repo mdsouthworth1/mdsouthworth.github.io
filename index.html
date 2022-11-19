@@ -23,6 +23,12 @@
        integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+    function expandContract() {
+      const el = document.getElementById("expand-contract")
+      el.classList.toggle('expanded')
+      el.classList.toggle('collapsed')
+   }</script>
 </head>
 <body>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////
@@ -209,7 +215,8 @@ Beta Gamma Sigma Honor Society <br>
                 <!-- Service Title -->
                 <h4>Heart Disease Predictors</h4>
                 <!-- Replace Patch to Image Under -->
-                <div class="expandMoreContent" id="showMoreContent1">
+                <div id="expand-container">
+                  <div id="expand-contract" class="expanded">
                     <p>This project incldues the exploration of the leading indicators of heart disease. Using Python, I examine each of the variables and develop a model to predict them. I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. </p><br>
                     <p>Here we see the distribution for those with and without heart disease:
                       <img src="images/PctHeartDisease.png" class="img-fluid" alt="Pct Heart Disease">
@@ -232,6 +239,7 @@ Beta Gamma Sigma Honor Society <br>
                       Recall: 0.8840579710144928
                     </p>
                     <p>We used Logistics regression in this example but there are many more effective machine learning models that we can use to improve upon the result.</p>
+                  </div>
                 </div>
                 <div id="expandMoreHolder" class="expand-active">
                     <span class="btn-expand-more" data-hidetext="Show Less.." data-showtext="Show More..."
