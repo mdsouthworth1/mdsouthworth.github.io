@@ -226,7 +226,7 @@ Beta Gamma Sigma Honor Society <br>
               <h4>Heart Disease Predictors</h4>
               <!-- Replace Patch to Image Under -->
               <div>
-                <p>This project incldues the exploration of the leading indicators of heart disease. Using Python, I examine each of the variables and develop a model to predict them. I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. </p><br>
+                <p>This project incldues the exploration of the leading indicators of heart disease. Using Python and scikit-learn, I examine each of the variables and develop a model to predict them. I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. </p><br>
                 <span id="text">
                 <p>Here we see the distribution for those with and without heart disease:
                     <img src="images/PctHeartDisease.png" class="img-fluid" alt="Pct Heart Disease">
@@ -264,7 +264,7 @@ Beta Gamma Sigma Honor Society <br>
           <!-- Replace Patch to Image Under -->
           <div>
               <p>
-                Chatbots have become ubiquitous and the applications of AI and machine learning have intrduced greater flexibility with their use and capabilities. Here I examine the use of novel machine learning models to augment the capabilities of traditional chatbots.
+                Neural networks have become increasingly popular as hardware becomes advanced enough to utilize them and as advances in research have led to better models and libraries. AI is an extremely useful tool to analyze and classify data. The ability to learn and automatically classify data is helping to reduce the workload and improve accuracy. This example seeks to determine how to classifly heartbeats using clinical data and classify them.
               </p>
               <span id="text">
                 <p>
@@ -278,8 +278,12 @@ Beta Gamma Sigma Honor Society <br>
                   4 = Unclassifiable beat<br>
                 </p>
                 <p>
-
-                  
+                  In this example I use a variety of neural network to determine the best accuracy. I first start with loading and exploring the dataset. 
+                  <img class="img-fluid" src="assets/images/HBset.png" alt="Heartbeat dataset">
+                  Since the dataset does not need any transformation or cleaning I can immediately split into training. Next, I reshape the data for keras input and find the baseline accuracy.
+                  <img class="img-fluid" src="assets/images/train.png" alt="Train dataset"><img class="img-fluid" src="assets/images/Baseline.png"></p>
+                  <p>Now we can create our models. We initialize a sequential deep model and define our parameters ensuring that the final layer is equal to the number of classes we have.<img class="img-fluid" src="assets/images/keras/png"><br>I continue this with 2 LSTM models and a deep GRU model to get the following results: <img class="img-fluid" src="assets/images/results.png"><br>
+                    Each type of neural network is useful for different tasks. For this set Recurrent Neural Networks (RNN) and deep networks are more suited for sequential data, leading to its much greater accuracy. We could also change hyperparameters and use other models to see how they affect results. Grid search is a powerful tool for finding the best combination. For now, our accuracy is far higher than baseline and could still be improved.<br>                 
                 You can access the Jupyter notebook with comments <a href="https://github.com/mdsouthworth1/Analytics/blob/main/Neural%20Network%20Classification.ipynb">here</a>.
               </p>
               </span>
