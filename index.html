@@ -54,6 +54,22 @@
      });
    });
    </script>
+   <script> 
+    $(document).ready(function() {
+       $("#toggle3").click(function(){
+         var elem = $("#toggle3").text();
+         if (elem == "Show More") {
+           //Stuff to do when btn is in the see more state
+           $("#toggle3").text("Show Less");
+           $("#text23").slideDown();
+         } else {
+           //Stuff to do when btn is in the see less state
+           $("#toggle3").text("Show More");
+           $("#text3").slideUp();
+         }
+       });
+     });
+     </script>
 </head>
 <body>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////
@@ -318,7 +334,7 @@ Beta Gamma Sigma Honor Society <br>
               <p>
                 In this project I use SAS to analyze and predict used car prices. Using various methods and data sources, I seek to project prices with publicly available data.
               </p>
-              <span id="text"><p>
+              <span id="text3"><p>
                 Using publicly available data, I use SAS to conduct linear regression on a dataset of cars sold in the US.
                 The data includes parameters such as make, model, year, mileage, location, and features of over 30,000 vehicles.<br>
                 After exploring the data, I omit any observations with null values and check for skewness along with other abnormalities.<img class="img-fluid" src="images/SAS/DistPric.png"><br>Here we also see the differences in vehicle type.<img class="img-fluid" src="images/SAS/VehicleDist.png">As expected, price is right skewed, and the most expensive vehicles tend to be SUVs and trucks, leading to most manufacturers focused on selling these types. Since the price is significantly skewed, log transformation remedies this issue. Based on the output, we also find insight that electric vehicles have higher selling pounts. With inflation high, the average new vehicles are selling at just over $47,000.<img src="images/SAS/RegressionOut.png" class="img-fluid" border="1px solid"><br>
@@ -328,7 +344,7 @@ Beta Gamma Sigma Honor Society <br>
               </span>
           </div>
           <div>
-            <button class="btn-rounded" id="toggle">Show More</button>
+            <button class="btn-rounded" id="toggle3">Show More</button>
           </div>
         </div>
       </div>
