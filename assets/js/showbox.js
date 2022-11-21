@@ -1,5 +1,4 @@
-
-   $(document).ready(function() {
+$(document).ready(function() {
     $("#toggle").click(function(){
       var elem = $("#toggle").text();
       if (elem == "Show More") {
@@ -12,8 +11,7 @@
         $("#text").slideUp();
       }
     })
-    })
-    $(document).ready(function() {
+    
         $("#toggle2").click(function(){
           var elem = $("#toggle2").text();
           if (elem == "Show More") {
@@ -26,8 +24,7 @@
             $("#text2").slideUp();
           }
         })
-      })
-      $(document).ready(function() {
+    
         $("#toggle3").click(function(){
           var elem = $("#toggle3").text();
           if (elem == "Show More") {
