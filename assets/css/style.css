@@ -10689,7 +10689,12 @@ textarea.form-control-lg {
   #text{
     display:none;
     }
-    
+  .tab4 {
+    tab-size: 4;
+  }
+  .tab8 {
+      tab-size: 8;
+  }
   .text-xxl-start {
     text-align: left !important;
   }
