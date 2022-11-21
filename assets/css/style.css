@@ -10691,9 +10691,13 @@ textarea.form-control-lg {
     }
   .tab4 {
     tab-size: 4;
+    display: inline-block;
+    margin-left: 220px;
   }
   .tab8 {
       tab-size: 8;
+      display: inline-block;
+      margin-left: 205px;
   }
   .text-xxl-start {
     text-align: left !important;
