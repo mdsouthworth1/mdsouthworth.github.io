@@ -12,9 +12,8 @@
         $("#text").slideUp();
       }
     });
-  });
   
-$(document).ready(function() {
+
    $("#toggle2").click(function(){
      var elem = $("#toggle2").text();
      if (elem == "Show More") {
@@ -27,9 +26,9 @@ $(document).ready(function() {
        $("#text2").slideUp();
      }
    });
- });
  
-  $(document).ready(function() {
+ 
+
      $("#toggle3").click(function(){
        var elem = $("#toggle3").text();
        if (elem == "Show More") {
@@ -42,4 +41,4 @@ $(document).ready(function() {
          $("#text3").slideUp();
        }
      });
-   });
+    })
