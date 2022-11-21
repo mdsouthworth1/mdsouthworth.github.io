@@ -219,8 +219,7 @@ Beta Gamma Sigma Honor Society <br>
                 <p>This project incldues the exploration of the leading indicators of heart disease. Using Python and scikit-learn, I examine each of the variables and develop a model to predict them. This example shows how to use Machine Learning to predict an outcome or disease to improve care, provide tailored care, and anticipate client needs.</p><br>
                 <span id="text">
                 <p>Here we see the distribution for those with and without heart disease:
-                    <img src="images/PctHeartDisease.png" class="img-fluid" alt="Pct Heart Disease">
-                    <img src="images/HDcount.png" class="img-fluid" alt="Count">
+                    <img src="images/HDcount.png" class="img-fluid" alt="Count of Heart Disease">
                 </p>
                 <p> I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. The data starts off with these variables:
                       Age,	Sex,	ChestPainType,	RestingBP,	Cholesterol,	FastingBS,	RestingECG,	MaxHR,	ExerciseAngina,	Oldpeak,	ST_Slope<br><br>	
@@ -269,7 +268,7 @@ Beta Gamma Sigma Honor Society <br>
                   4 = Unclassifiable beat<br>
                 </p>
                 <p>
-                  In this example I use a variety of neural network to determine the best accuracy. I first start with loading and exploring the dataset. <br><br>
+                  In this example I use a variety of neural network models to find which produces the best accuracy. I first start with loading and exploring the dataset. <br><br>
                   <img class="img-fluid" src="images/HBset.png" alt="Heartbeat dataset" border="1px solid"><br>
                   Since the dataset does not need any transformation or cleaning I can immediately split into training. Next, I reshape the data for keras input and find the baseline accuracy.<br>
                   <img class="img-fluid" src="images/train.png" alt="Train dataset"><img class="img-fluid" src="images/Baseline.png"></p>
@@ -297,7 +296,7 @@ Beta Gamma Sigma Honor Society <br>
               <span id="text3"><p>
                 Using publicly available data, I use SAS to conduct linear regression on a dataset of cars sold in the US.
                 The data includes parameters such as make, model, year, mileage, location, and features of over 30,000 vehicles.<br><br>
-                After exploring the data, I omit any observations with null values and check for skewness along with other abnormalities.<br><img class="img-fluid" src="images/SAS/DistPric.png"><br>Here we also see the differences in vehicle type.<img class="img-fluid" src="images/SAS/VehicleDist.png">As expected, price is right skewed, and the most expensive vehicles tend to be SUVs and trucks, leading to most manufacturers focused on selling these types. Since the price is significantly skewed, log transformation remedies this issue. Based on the output, we also find insight that electric vehicles have higher selling pounts. With inflation high, the average new vehicles are selling at just over $47,000.<img src="images/SAS/RegressionOut.png" class="img-fluid" border="1px solid" padding="5px"><br>
+                After exploring the data, I omit any observations with null values and check for skewness along with other abnormalities.<br><img class="img-fluid" src="images/SAS/DistPric.png"><br>Here we also see the differences in vehicle type.<img class="img-fluid" src="images/SAS/VehicleDist.png">As expected, price is right skewed, and the most expensive vehicles tend to be SUVs and trucks, leading to most manufacturers focused on selling these types. Since the price is significantly skewed, log transformation remedies this issue. Based on the output, we also find insight that electric vehicles have higher selling pounts. With inflation high, the average new vehicles are selling at just over $47,000.<br><br><img src="images/SAS/RegressionOut.png" class="img-fluid" border="1px solid">
                 You can view the SAS code <a href="https://github.com/mdsouthworth1/Analytics">here
                 </a>
               </p>
