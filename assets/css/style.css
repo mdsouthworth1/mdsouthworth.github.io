@@ -10686,6 +10686,10 @@ textarea.form-control-lg {
     padding-left: 3rem !important;
   }
 
+  #text{
+    display:none;
+    }
+    
   .text-xxl-start {
     text-align: left !important;
   }
