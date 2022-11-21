@@ -254,7 +254,7 @@ Beta Gamma Sigma Honor Society <br>
               <span id="text2">
                 <p>
                   This data set is available by MIT. This is a multiclass classification model to determine if heartbeats are normal or contain abnormalities.The dataset contains measurements with 80 time steps for each row and each time step has one measurement. 
-                  They are labeled from T1 to T80 and classified in the following categories:
+                  They are labeled from T1 to T80 and classified in the following categories:<br>
                   
                   0 = Normal<br>
                   1 = Supraventricular premature beat<br>
@@ -263,12 +263,12 @@ Beta Gamma Sigma Honor Society <br>
                   4 = Unclassifiable beat<br>
                 </p>
                 <p>
-                  In this example I use a variety of neural network to determine the best accuracy. I first start with loading and exploring the dataset. 
-                  <img class="img-fluid" src="images/HBset.png" alt="Heartbeat dataset">
-                  Since the dataset does not need any transformation or cleaning I can immediately split into training. Next, I reshape the data for keras input and find the baseline accuracy.
+                  In this example I use a variety of neural network to determine the best accuracy. I first start with loading and exploring the dataset. <br><br>
+                  <img class="img-fluid" src="images/HBset.png" alt="Heartbeat dataset" border="1px solid"><br>
+                  Since the dataset does not need any transformation or cleaning I can immediately split into training. Next, I reshape the data for keras input and find the baseline accuracy.<br>
                   <img class="img-fluid" src="images/train.png" alt="Train dataset"><img class="img-fluid" src="images/Baseline.png"></p>
-                  <p>Now we can create our models. We initialize a sequential deep model and define our parameters ensuring that the final layer is equal to the number of classes we have.<img class="img-fluid" src="images/keras.png"><br>I continue this with 2 LSTM models and a deep GRU model to get the following results: <img class="img-fluid" src="images/results.png"><br>
-                    Each type of neural network is useful for different tasks. For this set Recurrent Neural Networks (RNN) and deep networks are more suited for sequential data, leading to its much greater accuracy. We could also change hyperparameters and use other models to see how they affect results. Grid search is a powerful tool for finding the best combination. For now, our accuracy is far higher than baseline and could still be improved.<br>                 
+                  <p>Now we can create our models. We initialize a sequential deep model and define our parameters ensuring that the final layer is equal to the number of classes that we have.<br><img class="img-fluid" src="images/keras.png"><br>I continue this with 2 LSTM models and a deep GRU model to get the following results:<br> <img class="img-fluid" src="images/results.png" border="1px solid"><br>
+                    Each type of neural network is useful for different tasks. For this set Recurrent Neural Networks (RNN) and deep networks are more suited for sequential data, leading to its much greater accuracy. We could also change hyperparameters and use other models to see how they affect results. Grid search is a powerful tool for finding the best combination. For now, our accuracy is far higher than baseline and could still be improved.<br><br>            
                 You can access the Jupyter notebook with comments <a href="https://github.com/mdsouthworth1/Analytics/blob/main/Neural%20Network%20Classification.ipynb">here</a>.
               </p>
               </span>
