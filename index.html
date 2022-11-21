@@ -38,7 +38,22 @@
       });
     });
     </script>
-
+<script> 
+  $(document).ready(function() {
+     $("#toggle2").click(function(){
+       var elem = $("#toggle2").text();
+       if (elem == "Show More") {
+         //Stuff to do when btn is in the see more state
+         $("#toggle2").text("Show Less");
+         $("#text2").slideDown();
+       } else {
+         //Stuff to do when btn is in the see less state
+         $("#toggle2").text("Show More");
+         $("#text2").slideUp();
+       }
+     });
+   });
+   </script>
 </head>
 <body>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////
@@ -266,7 +281,7 @@ Beta Gamma Sigma Honor Society <br>
               <p>
                 Neural networks have become increasingly popular as hardware becomes advanced enough to utilize them and as advances in research have led to better models and libraries. AI is an extremely useful tool to analyze and classify data. This example seeks to determine how to classifly heartbeats using clinical data and classify them.
               </p>
-              <span id="text">
+              <span id="text2">
                 <p>
                   This data set is available by MIT. This is a multiclass classification model to determine if heartbeats are normal or contain abnormalities.The dataset contains measurements with 80 time steps for each row and each time step has one measurement. 
                   They are labeled from T1 to T80 and classified in the following categories:
@@ -289,7 +304,7 @@ Beta Gamma Sigma Honor Society <br>
               </span>
           </div>
           <div>
-            <button class="btn-rounded" id="toggle">Show More</button>
+            <button class="btn-rounded" id="toggle2">Show More</button>
           </div>
       </div>
     </div>
