@@ -172,19 +172,18 @@ Beta Gamma Sigma Honor Society <br>
             </h2>
             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <strong>
-                  Anomaly Detection and Command Line Parsing with Machine Learning - Python - Spring 2022:</strong> <br>
-                  <li>Using Python machine learning tools and word embedding<br>
-                  <li>Developed model to identify anomalies for potential malicious commands<br>
-                  <li>Used natural language processing to develop best model<br><br>
-                  <strong>Heart Disease Predictions - Python - Fall 2021:</strong><br>
-                  <li>Used multiple variables and logistic regression</li><br>
-                  <li>Determined high predictors for heart disease</li><br>
-                  <li>Developed model for predictions</li><br><br>
-                  <strong>Chatbots and Machine Learning - Python & Flask - Fall 2022: </strong><br>
-                  <li>Learned how to develop a chatbot in Python</li><br>
-                  <li>Used Machine Learning packages for training and testing</li><br>
-                  <li>Integrated into website using Flask</li>
+                <strong>Heart Disease Predictions - Python - Fall 2021:</strong><br>
+                <li>Used multiple variables and logistic regression</li>
+                <li>Determined high predictors for heart disease</li>
+                <li>Developed model for predictions</li><br>
+                <strong>Anomaly Detection and Command Line Parsing with Machine Learning - Python - Spring 2022:</strong><br>
+                <li>Using Python machine learning tools and word embedding<br>
+                <li>Developed model to identify anomalies for potential malicious commands<br>
+                <li>Used natural language processing to develop best model<br><br>
+                <strong>Chatbots and Machine Learning - Python & Flask - Fall 2022: </strong><br>
+                <li>Learned how to develop a chatbot in Python</li>
+                <li>Used Machine Learning packages for training and testing</li>
+                <li>Integrated into website using Flask</li>
             </div>
           </div>
         </div>
@@ -217,13 +216,13 @@ Beta Gamma Sigma Honor Society <br>
               <h4>Heart Disease Predictors</h4>
               <!-- Replace Patch to Image Under -->
               <div>
-                <p>This project incldues the exploration of the leading indicators of heart disease. Using Python and scikit-learn, I examine each of the variables and develop a model to predict them. I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. </p><br>
+                <p>This project incldues the exploration of the leading indicators of heart disease. Using Python and scikit-learn, I examine each of the variables and develop a model to predict them. This example shows how to use Machine Learning to predict an outcome or disease to improve care, provide tailored care, and anticipate client needs.</p><br>
                 <span id="text">
                 <p>Here we see the distribution for those with and without heart disease:
                     <img src="images/PctHeartDisease.png" class="img-fluid" alt="Pct Heart Disease">
                     <img src="images/HDcount.png" class="img-fluid" alt="Count">
                 </p>
-                <p>The data starts off with these variables:
+                <p> I first begin by exploring the data and filtering. Then I examine the model to determine the best predictors. The data starts off with these variables:
                       Age,	Sex,	ChestPainType,	RestingBP,	Cholesterol,	FastingBS,	RestingECG,	MaxHR,	ExerciseAngina,	Oldpeak,	ST_Slope<br><br>	
                       Next we see the distribution of each variable:<br>
                       <img src="images/maxhr.png" class="img-fluid" alt="Distribution of Max HR">
@@ -232,7 +231,8 @@ Beta Gamma Sigma Honor Society <br>
                       <img src="images/cholesterol.png" class="img-fluid" alt="Distribution of cholesterol"><br>
                       Finally, we can see the correlation between them and if there are any variables in the data too correlated that we need to look out for in this heatmap:
                       <img src="images/heatmap.png" alt="heatmap" class="img-fluid"><br>
-                      We can see some problems with 0 values in cholesterol and other issues with the data. Removing cholesterol altogether leads to a worse model than without so in this case I will simply remove the rows with the missing values instead. The other variables have wide ranges so I scale those and create categories for the non-numerical variables. 
+                      We can see some problems with 0 values in cholesterol and other issues with the data. Removing cholesterol altogether leads to a worse model than without so in this case I will simply remove the rows with the missing values instead. The numberic variables have wide ranges so I scale those using a standard scalar and transform the categorical variables to prepare them for training.
+                      <img src="images/SS.png" class="img-fluid" alt="transform script">
                     </p>
                     <p>With the variables I selected, we can see the results:<br>
                       Accuracy: 0.8666666666666667<br>
@@ -255,7 +255,7 @@ Beta Gamma Sigma Honor Society <br>
           <!-- Replace Patch to Image Under -->
           <div>
               <p>
-                Neural networks have become increasingly popular as hardware becomes advanced enough to utilize them and as advances in research have led to better models and libraries. AI is an extremely useful tool to analyze and classify data. This example seeks to determine how to classifly heartbeats using clinical data and classify them.
+                Neural networks have become increasingly popular as hardware becomes advanced enough to utilize them and as advances in research have led to better models and libraries. AI is an extremely useful tool to analyze and classify data. This example seeks to determine how to classifly heartbeats using clinical data and classify them. The results of this analysis can be used by clinicians to quickly identify and treat individuals faster and provide better care and quality results while reducing potential mistakes by treatment providers.
               </p>
               <span id="text2">
                 <p>
@@ -292,7 +292,7 @@ Beta Gamma Sigma Honor Society <br>
           <!-- Replace Patch to Image Under -->
           <div>
               <p>
-                In this project I use SAS to analyze and predict used car prices. Using various methods and data sources, I seek to project prices with publicly available data.
+                In this project I use SAS to analyze and predict used car prices. Using various methods and data sources, I seek to project prices with publicly available data using regression. This shows how we can determine the influence various predictors have on a target variable, in this case price. We can then use this information to make better pricing decisions and anticipate the affect on demand.
               </p>
               <span id="text3"><p>
                 Using publicly available data, I use SAS to conduct linear regression on a dataset of cars sold in the US.
