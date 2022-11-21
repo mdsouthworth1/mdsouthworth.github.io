@@ -1,3 +1,4 @@
+$(document).ready(function() {
   $("#toggle2").click(function(){
     var elem = $("#toggle2").text();
     if (elem == "Show More") {
@@ -10,3 +11,4 @@
       $("#text2").slideUp();
     }
   })
+})
