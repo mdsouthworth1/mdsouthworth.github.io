@@ -253,11 +253,11 @@ Beta Gamma Sigma Honor Society <br><br>
           <!-- Service Title -->
           <h4>Neural Network Classification</h4>
           <!-- Replace Patch to Image Under -->
-          <div>
+          <div class = "expandMoreContent" id="showMoreContent1">
               <p>
                 Neural networks have become increasingly popular as hardware becomes advanced enough to utilize them and as advances in research have led to better models and libraries. AI is an extremely useful tool to analyze and classify data. This example seeks to determine how to classifly heartbeats using clinical data and classify them. The results of this analysis can be used by clinicians to quickly identify and treat individuals faster and provide better care and quality results while reducing potential mistakes by treatment providers.
               </p>
-              <span id="text2">
+              <span id="tex2">
                 <p>
                   This data set is available by MIT. This is a multiclass classification model to determine if heartbeats are normal or contain abnormalities.The dataset contains measurements with 80 time steps for each row and each time step has one measurement. 
                   They are labeled from T1 to T80 and classified in the following categories:<br>
@@ -279,8 +279,13 @@ Beta Gamma Sigma Honor Society <br><br>
               </p>
               </span>
           </div>
-          <div>
-            <button class="btn-rounded" id="toggle2">Show More</button>
+          <div class="expandMoreContent expand-active">
+            <div class ="expandMoreHolder">
+              <span expand-more data-hidetext = "Show Less.." data-showtext = "Show More..." data-target = "showMoreContent1"
+              class = "btn-expand-more">
+              Show More...
+              </span>
+          </div>
           </div>
       </div>
     </div>
