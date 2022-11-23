@@ -23,9 +23,6 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="assets/js/showbox.js"></script>
-  <script src="assets/js/showbox copy.js"></script>
-  <script src="assets/js/showbox copy 2.js"></script>
-
 </head>
 <body>
 <!-- ////////////////////////////////////////////////////////////////////////////////////////
@@ -218,7 +215,9 @@ Beta Gamma Sigma Honor Society <br><br>
               <!-- Replace Patch to Image Under -->
               <div>
                 <p>This project incldues the exploration of the leading indicators of heart disease. Using Python and scikit-learn, I examine each of the variables and develop a model to predict them. This example shows how to use Machine Learning to predict an outcome or disease to improve care, provide tailored care, and anticipate client needs.</p><br>
-                <span id="text">
+                <input id="toggle1" type="checkbox">
+                <label for="toggle1">Click to expand</label>
+                <div id="expand1">
                 <p>Here we see the distribution for those with and without heart disease:
                     <img src="images/HDcount.png" class="img-fluid" alt="Count of Heart Disease">
                 </p>
@@ -240,10 +239,7 @@ Beta Gamma Sigma Honor Society <br><br>
                       Recall: 0.8840579710144928
                     </p>
                     <p>We used Logistics regression in this example but there are many more effective machine learning models that we can use to improve upon the result. With the notebook we can see the visualization options and techniques to explore and transform our data. Click <a href="https://github.com/mdsouthworth1/Analytics/blob/main/PythonProject.py">here</a> to access the python notebook.</p>
-                    </span>
-                  </div>
-                  <div>
-                    <button class="btn-rounded" id="toggle">Show More</button>
+                    </div>
                   </div>
           </div>
         </div>
@@ -257,10 +253,12 @@ Beta Gamma Sigma Honor Society <br><br>
               <p>
                 Neural networks have become increasingly popular as hardware becomes advanced enough to utilize them and as advances in research have led to better models and libraries. AI is an extremely useful tool to analyze and classify data. This example seeks to determine how to classifly heartbeats using clinical data and classify them. The results of this analysis can be used by clinicians to quickly identify and treat individuals faster and provide better care and quality results while reducing potential mistakes by treatment providers.
               </p>
-              <span id="text2">
+              <input id="toggle" type="checkbox">
+              <label for="toggle">Click to expand</label>
+              <div id="expand">
                 <p>
-                  This data set is available by MIT. This is a multiclass classification model to determine if heartbeats are normal or contain abnormalities.The dataset contains measurements with 80 time steps for each row and each time step has one measurement. 
-                  They are labeled from T1 to T80 and classified in the following categories:<br>
+                  Using Tensorflow and scikit-learn, I train neural network models to identify abnormal heartbeats.<br><br>
+                  This data set is available by MIT. This is a multiclass classification model to determine if heartbeats are normal or contain abnormalities.The dataset contains measurements with 80 time steps for each row and each time step has one measurement. They are labeled from T1 to T80 and classified in the following categories:<br><br>
                   
                   0 = Normal<br>
                   1 = Supraventricular premature beat<br>
@@ -271,16 +269,13 @@ Beta Gamma Sigma Honor Society <br><br>
                 <p>
                   In this example I use a variety of neural network models to find which produces the best accuracy. I first start with loading and exploring the dataset. <br><br>
                   <img class="img-fluid" src="images/HBset.png" alt="Heartbeat dataset" border="1px solid"><br>
-                  Since the dataset does not need any transformation or cleaning I can immediately split into training. Next, I reshape the data for keras input and find the baseline accuracy.<br>
+                  Since the dataset does not need any transformation or cleaning I can immediately split into training. Next, I reshape the data for keras input and find the baseline accuracy.<br><br>
                   <img class="img-fluid" src="images/train.png" alt="Train dataset"><img class="img-fluid" src="images/Baseline.png">From this image we see that our baseline is 58%.</p>
-                  <p>Now we can create our models. We initialize a sequential deep model and define our parameters ensuring that the final layer is equal to the number of classes that we have.<br><img class="img-fluid" src="images/keras.png"><br>I continue this with 2 LSTM models and a deep GRU model to get the following results:<br> <img class="img-fluid" src="images/results.png" border="1px solid"><br>
-                    Each type of neural network is useful for different tasks. For this set Recurrent Neural Networks (RNN) and deep networks are more suited for sequential data, leading to its much greater accuracy. We could also change hyperparameters and use other models to see how they affect results. Grid search is a powerful tool for finding the best combination. For now, our accuracy is far higher than baseline and could still be improved.<br><br>            
+                  <p>Now we can create our models. I initialize a sequential deep model and define our parameters ensuring that the final layer is equal to the number of classes that we have using a softmax for classification.<br><br><img class="img-fluid" src="images/keras.png" border="1px solid"><br>I continue this with 2 LSTM models and a deep GRU model to get the following results:<br><br><img class="img-fluid" src="images/results.png" border="1px solid"><br>
+                    Each type of neural network is useful for different tasks. For this example, Recurrent Neural Networks (RNN) and deep networks are more suited for sequential data, leading to its much greater accuracy. We could also change hyperparameters and use other models to see how they affect results. Grid search is a powerful tool for finding the best combination. For now, our accuracy is far higher than baseline and could still be improved.<br><br>            
                 You can access the Jupyter notebook with comments <a href="https://github.com/mdsouthworth1/Analytics/blob/main/Neural%20Network%20Classification.ipynb">here</a>. The associated code in the notebook shows how we can create different models for specific purposes and adapt to organizational needs. 
               </p>
-              </span>
-          </div>
-          <div>
-            <button class="btn-rounded" id="toggle2">Show More</button>
+            </div>
           </div>
       </div>
     </div>
@@ -294,19 +289,19 @@ Beta Gamma Sigma Honor Society <br><br>
               <p>
                 In this project I use SAS to analyze and predict used car prices. Using various methods and data sources, I seek to project prices with publicly available data using regression. This shows how we can determine the influence various predictors have on a target variable, in this case price. We can then use this information to make better pricing decisions and anticipate the affect on demand.
               </p>
-              <span id="text3"><p>
+              <input id="toggle2" type="checkbox">
+              <label for="toggle2">Click to expand</label>
+              <div id="expand2">    
+                <p>
                 Using publicly available data, I use SAS to conduct linear regression on a dataset of cars sold in the US.
                 The data includes parameters such as make, model, year, mileage, location, and features of over 30,000 vehicles.<br><br>
-                After exploring the data, I omit any observations with null values and check for skewness along with other abnormalities.<br><br><img class="img-fluid" src="images/SAS/DistPric.png"><br>Here we also see the differences in vehicle type.<br><br><img class="img-fluid" src="images/SAS/VehicleDist.png"></p>
+                After exploring the data, I omit any observations with null values and check for skewness along with other abnormalities.<br><br><img class="img-fluid" src="images/SAS/DistPric.png" border="1px solid"><br>Here we also see the differences in vehicle type.<br><br><img class="img-fluid" src="images/SAS/VehicleDist.png"></p>
                 <p>As expected, price is right skewed, and the most expensive vehicles tend to be SUVs and trucks. This explains the shift as many manufacturers are focused on selling these vehicles. We also find that electric vehicles also have higher selling points. <br><br>Since the price is significantly skewed, log transformation remedies this issue. With inflation high, the average new vehicles are selling at just over $47,000 and are likely to keep increasing. The shift to trucks and SUVs are creating upward pressure on prices, further affecting the average selling price. <br><br><img src="images/SAS/RegressionOut.png" class="img-fluid" border="1px solid"><br>
-                With this output we can see exactly how each variable affects the price of a vehicle and plan accordingly.</p><br>
+                With this output we can see exactly how each variable affects the price of a vehicle and plan accordingly. Each variable has a different effect and makes it possible to predict an accurate selling point in combination with each attribute. While this example covers regression, there are some potential interaction effects that were not explored in this output that may be discovered with a more expansive data set.</p>
                 You can view the SAS code <a href="https://github.com/mdsouthworth1/Analytics">here.
                 </a>
               </p>
-              </span>
-          </div>
-          <div>
-            <button class="btn-rounded" id="toggle3">Show More</button>
+            </div>
           </div>
         </div>
       </div>

@@ -306,7 +306,79 @@ th {
 
 label {
   display: inline-block;
+  padding: 0.5em;
+  text-align: center;
+  transition: 0.2s;
+  background: rgba(153, 38, 240, 0.95);
+  position: relative;
+  font-weight: 700;
+  margin: 0;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  background-color: #fff;
+  display: block;
 }
+
+label:hover {
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+  color: #fff;
+}
+
+label:before {
+  font-weight: 800;
+  font-size: 19px;
+  content: "+";
+  display: inline-block;
+  vertical-align: text-top;
+  width: 33px;
+  height: 33px;
+  margin: -5px 5px;
+  background: rgba(153, 38, 240, 0.95);
+  border-radius: 100%;
+  border: 1px solid #000;
+}
+
+#expand {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+#toggle:checked ~ #expand {
+  height: auto;
+}
+
+#expand1 {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+#toggle1:checked ~ #expand1 {
+  height: auto;
+}
+
+#expand2 {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s;
+}
+
+#toggle2:checked ~ #expand2 {
+  height: auto;
+}
+
+#toggle:checked ~ label::before {
+  content: "-"
+}
+
+#toggle1:checked ~ label::before {
+  content: "-"
+}
+
+#toggle2:checked ~ label::before {
+  content: "-"
+}
+
 
 button {
   border-radius: 0;
@@ -547,7 +619,7 @@ progress {
 }
 
 .initialism {
-  font-size: 0.875em;
+   ze: 0.875em;
   text-transform: uppercase;
 }
 
@@ -2614,6 +2686,11 @@ textarea.form-control-lg {
 .form-floating > .form-control:-webkit-autofill ~ label {
   opacity: 0.65;
   transform: scale(0.85) translateY(-0.5rem) translateX(0.15rem);
+}
+
+input {
+  display: none;
+  visibility: hidden;
 }
 
 .input-group {
@@ -10932,7 +11009,7 @@ textarea.form-control-lg {
   margin: 10px;
   -webkit-box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
   -moz-box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
-  box-shadow: 0px 3px 7px 0px rgba(28, 31, 33, 0.15);
+  box-shadow: 3px 3px 7px 3px rgba(28, 31, 33, 0.15);
   min-height: 400px;
 }
 
