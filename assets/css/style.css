@@ -271,6 +271,11 @@ figure {
   margin: 0 0 1rem;
 }
 
+col_section {
+  display: flex;
+  padding: 3px;
+}
+
 img,
 svg {
   vertical-align: middle;
